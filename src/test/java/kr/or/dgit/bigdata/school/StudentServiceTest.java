@@ -9,6 +9,7 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import kr.or.dgit.bigdata.school.dto.PhoneNumber;
 import kr.or.dgit.bigdata.school.dto.Student;
 import kr.or.dgit.bigdata.school.service.StudentService;
 
@@ -41,18 +42,18 @@ public class StudentServiceTest {
 		Assert.assertNotNull(std);
 	}*/
 	
-	/*@Test
+	@Test
 	public void testInsertItem(){
 		Calendar cal = Calendar.getInstance();
 		cal.set(2000, 01, 01);
 		
-		Student insStd = new Student(6, "강보미3", "kbm@test.co.kr", cal.getTime());
+		Student insStd = new Student(1, "모모", "momo@test.co.kr", cal.getTime(), new PhoneNumber("010-2133-2320"));
 		studentService.insertItem(insStd);
 		
-		List<Student> list = studentService.findAllStudent();
+	/*	List<Student> list = studentService.findAllStudent();
 		
-		Assert.assertEquals(6, list.size());
-	}*/
+		Assert.assertEquals(5, list.size());*/
+	}
 	
 	/*@Test
 	public void testDeleteItem(){
@@ -64,18 +65,18 @@ public class StudentServiceTest {
 	}*/
 	
 	
-	@Test
+	/*@Test
 	public void testUpdateItem(){
 		Calendar cal = Calendar.getInstance();
 		cal.clear();
 		cal.set(2000, 01, 01);
 		
-		Student upStd = new Student(5, "사나", "sana@test.co.kr", cal.getTime());
+		Student upStd = new Student(4, "사나", "sana@test.co.kr", cal.getTime(), new PhoneNumber("010-2133-2320"));
 		studentService.updateItem(upStd);
 		
-		Student selectItem = studentService.selectByNo(5);
+		Student selectItem = studentService.selectByNo(4);
 		
 		Assert.assertEquals(selectItem, upStd);
-	}
+	}*/
 
 }
